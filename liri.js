@@ -19,8 +19,8 @@ var textFile = ('./log.txt');
 
 // The switch-case will direct which function gets run.
 switch (command) {
+
   case "movie-this":
-    ``
     movie();
     break;
 
@@ -150,10 +150,11 @@ function justDoIt() {
       return console.log(error);
     }
     // array holds the contents we got from random.txt
-    var contentsArr = contents
+    var contentsArr = contents.split(",");
 
     // newAction = the second thing in the array because we're gonna call spotify this way and bypass first argument of the file
     var newAction = contentsArr[1];
+    console.log(contentsArr[1]);
     // give a shout out to spotify
     client2.search({ type: 'track', query: newAction }, function(err, data) {
       if (err) {
